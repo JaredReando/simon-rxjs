@@ -1,4 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   font-family: sans-serif;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.board {
+  position: relative;
+  border: 10px solid black;
+  border-radius: 50%;
+  max-width: 800px;
+  background-color: black;
+  max-height: 800px;
+  min-width: 400px;
+  min-height: 400px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  overflow: hidden;
+}
+
+.tile {
+  all: unset;
+  background: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tile:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.tile:active {
+  opacity: 0.7;
+}
+
+.yellow-tile {
+  background-color: yellow;
+}
+
+.blue-tile {
+  background-color: blue;
+}
+
+.red-tile {
+  background-color: red;
+}
+
+.green-tile {
+  background-color: green;
+}
+
+.center-tile {
+  z-index: 1;
+  background: black;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid black;
+  height: 25%;
+  width: 25%;
+  border-radius: 50%;
+}
+
+.center-tile:hover {
+  opacity: 1;
+  background-color: darkgrey;
+}
+
+.center-tile:active {
+  opacity: 1;
+  background-color: grey;
 }
